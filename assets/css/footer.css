@@ -1,0 +1,16 @@
+footer {
+    background-image: url(../../media/images/webp/footer_imagem_720p.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 160px 30px;
+}
+
+.footer-group {
+    width: auto;
+}
+
+.footer-group ol {
+    display: flex;
+    flex-wrap: wrap;
+}

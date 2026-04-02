@@ -3,11 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Rick and Morty</title>
 </head>
 <body>
-    <h1>Rick <small style="font-size: 0.5em;">and</small> Morty</h1>
+    <div id="preloader-container">
+        <video id="preloader-video" autoplay playsinline muted>
+            <source src="media/videos/rick_and_morty_preloader_gif_720p.mp4" type="video/mp4">
+            <source src="media/videos/rick_and_morty_preloader_gif_480p.mp4" type="video/mp4">
+        </video>
+        <div id="preloader-loading-status">
+            <h2>Carregando</h2>
+            <div id="preloader-loading-bar">
+                <span class="porcentagem-carregamento">90%</span>
+            </div>
+        </div>
+    </div>
+    <div id="content-container">
+        <header>
+            <div class="logos">
+                <span id="tr-is-logo">T.R e I.S</span>
+                <div class="as-logo">
+                    <img src="media/logos/as2003_logo.svg" id="as-header-logo" alt="Logo do Adult Swin" title="Logo do Adult Swin">
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="hero-container">
+                <h1>
+                    <picture id="rick-and-morty-hero-logo">
+                        <source media="(min-width: 1024px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                        <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
+                    </picture>
+                </h1>
+                <div id="max-watch-btn">
+                    <img src="media/logos/max_logo.svg" alt="Logo da Max">
+                    <a href="https://max.com">Quero assistir agora!</a>
+                </div>
+            </section>
+            <section id="info-container">
+                <div class="info-video-container">
+                    <video autoplay loop playsinline muted class="info-video">
+                        <source src="media/videos/rick_andando_720p.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <article class="info-oque-e">
+                    <h2>O que é Rick e Morty?</h2>
+                    <p>
+                        Rick and Morty é uma animação adulta de ficção científica que segue Rick Sanchez, um  cientista genial e alcoólatra, que retorna após 20 anos para morar com  sua filha Beth e sua família. Ele arrasta seu neto, Morty, para  aventuras perigosas, bizarras e surreais através do multiverso,  equilibrando a vida familiar com viagens interdimensionais
+                    </p>
+                </article>
+            </section>
+            <section id="cthullu-container">
+                <article class="trailer-temporada">
+                    <h3>Assistir ao trailer da 8ª Temporada </h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/W6TVcu1kznk?si=gu0qj1I0yFWvzaz1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </article>
+                <article class="explorar-temporadas">
+                    <h2>Explorar temporadas</h2>
+                    <div class="temporadas-carrossel">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </article>
+                <section class="parceiros">
+                    <h3>Parceiros</h3>
+                    <div class="parceiros-carrossel">
+                        <img src="media/logos/warner_bros_discoverylatinamerica.svg" alt="Logo da Warner Bros">
+                        <img src="media/logos/as2003_logo.svg" alt="Logo do Adult Swim">
+                        <img src="media/logos/williams_street2020_logo.png" alt="Logo do Williams Street">
+                        <img src="media/logos/green_portal_logo_360p.png" alt="Logo do Green Portal">
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <picture id="rick-and-morty-hero-logo">
+                    <source media="(min-width: 1024px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                    <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
+                </picture>
+            <section class="footer-group">
+                <h3>Temporadas</h3>
+                <ol>
+                    <li><a href="">Temporada</a></li>
+                    <li><a href="">Temporada</a></li>
+                    <li><a href="">Temporada</a></li>
+                    <li><a href="">Temporada</a></li>
+                    <li><a href="">Temporada</a></li>
+                    <li><a href="">Temporada</a></li>
+                    <li><a href="">Temporada</a></li>
+                    <li><a href="">Temporada</a></li>
+                </ol>
+            </section>
+            <section class="footer-group">
+                <h3>Redes Sociais (Isabella)</h3>
+                <div class="social-icons">
+                    <!-- Aqui fica os icon -->
+                    <a href="">
+                        <img src="" alt="Link de acesso do Linkedin da Isabela, uma das desenvolvedoras do site">
+                    </a>
+                    <a href="">
+                        <img src="" alt="Link de acesso do Github da Isabela">
+                    </a>
+                    <a href="">
+                        <img src="" alt="Link de acesso do Instagram da Isabela, uma das desenvolvedoras do site">
+                    </a>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
