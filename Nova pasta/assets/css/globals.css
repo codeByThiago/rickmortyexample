@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --light-text-clor: #ffffffe6;
+    --dark-background: #091011;
+    --yellow-emphasis: #FFFF00;
+    --red-btn: #FF0000;
+    --blue-btn: #193840;
+    --font-padrao: "Montserrat", sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
