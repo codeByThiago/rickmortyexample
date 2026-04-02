@@ -38,3 +38,24 @@ h3 {
     font-weight: 600;
     text-transform: uppercase;
 }
+
+.video-responsivo {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    filter: brightness(1) invert(90%);
+    transition: all .3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1) invert(70%) ;
+    box-shadow: 1px 1px 3px #5b454543;
+    border-radius: 10px;
+    padding: 4px;
+}

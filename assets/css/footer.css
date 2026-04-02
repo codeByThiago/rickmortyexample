@@ -1,16 +1,94 @@
 footer {
-    background-image: url(../../media/images/webp/footer_imagem_720p.webp);
+    background-image:
+        radial-gradient(circle at 70% 50%, rgba(9, 14, 17, 0.2) 31%, 41%, #090e1185 100%),
+        linear-gradient(to bottom, #090e11 0%, #090e1100 22%),
+        url(../../media/images/webp/footer_imagem_1080p.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 160px 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 120px;
+    max-width: 700px;
+}
+
+.footer-temp-colab-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 80px;
 }
 
 .footer-group {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
     width: auto;
 }
 
-.footer-group ol {
+.footer-group h3 {
+    font-size: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--light-white-color);
+}
+
+#footer-lista-temporadas {
     display: flex;
     flex-wrap: wrap;
+    list-style-position: inside;
+    gap: 24px;
+}
+
+#footer-lista-temporadas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    max-width: 600px;
+    text-align: center;
+    list-style-position: inside;
+    list-style: none;
+    gap: 16px;
+}
+
+#footer-lista-temporadas a {
+    display: block;
+    padding: 16px 0px;
+    border-radius: 50px;
+    background-color: #1e414a;
+    transition: all .5s ease;
+}
+
+#footer-lista-temporadas a:hover {
+    background-color: var(--blue-btn);
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px #2b01015d;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer-group a {
+    color: var(--light-white-color);
+    text-decoration: none;
+}
+
+.footer-colaboradores {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 60px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 5px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .footer-colaboradores {
+        flex-flow: row;
+    }
 }

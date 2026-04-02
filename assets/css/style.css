@@ -2,11 +2,15 @@
 
 header {
     position: absolute;
+    padding: 60px;
+    left: 0;
+    right: 0;
 }
 
 header .logos {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 header #tr-is-logo {
@@ -14,7 +18,14 @@ header #tr-is-logo {
     font-weight: 500;
 }
 
+header .as-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 header #as-header-logo {
+    filter: brightness(0) invert(90%);
     height: 18px;
 }
 
@@ -30,7 +41,7 @@ section#hero-container {
         linear-gradient(to bottom, #09101100 76%, #091011 94%),
         url(../../media/images/webp/banner_home_page_1080p.webp);
     background-repeat: no-repeat;
-    background-position: 65% 70%;
+    background-position: 65% top;
     height: 100dvh;
     background-size: cover;
     padding: 60px;
@@ -50,6 +61,8 @@ section#hero-container {
 }
 
 #max-watch-btn img {
+    mix-blend-mode: soft-light;
+    filter: brightness(0) invert(90%);
     height: 36px;
 }
 
@@ -60,13 +73,29 @@ section#hero-container {
     font-size: 16px;
     border-radius: 50px;
     text-decoration: none;
+    transition: all ease 0.5s;
 }
+
+#max-watch-btn a:hover {
+    font-weight: 500;
+    background-color: rgb(254, 33, 33);
+    color: rgb(254, 254, 60);
+    transform: scale(1.05);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ======= INFO CONTAINER - O QUE É RICK AND MORTY =======  */
 
 #info-container {
     position: relative;
-    padding: 60px;
+    padding: 160px 30px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    min-height: 100dvh;
+    background-image: 
+        linear-gradient(to bottom, #091011 0%, #09101100 50%),
+        radial-gradient(circle, #09101100 50%, #091011a7 100%);
 }
 
 .info-video-container video {
@@ -108,28 +137,82 @@ section#hero-container {
     align-items: center;
     justify-content: center;
     gap: 300px;
-    padding: 100px;
+    padding: 160px 30px;
+    overflow: hidden;
 }
 
 /* ======= ASSISTIR TRAILER ======= */
 
+.trailer-temporada-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
 
+/* ======= EXPLORAR TEMPORADAS ======= */
+
+.explorar-temporadas-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 32px;
+    width: 100%;
+}
+
+.explorar-temporadas-container img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.temporadas-carrossel {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    width: fit-content;
+}
+
+.temporada-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
 
 /* ======= PARCEIROS ======= */
 
-.parceiros {
+.parceiros-container {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    gap: 32px;
+    text-align: center;
+    overflow: hidden;
 }
 
 .parceiros-carrossel {
     display: flex;
-    width: 100%;
-    overflow: hidden;
+    list-style: none;
+    align-items: center;
+    gap: 100px;
+    width: max-content;
+    animation: infiniteScroll 20s linear infinite;
 }
 
 .parceiros-carrossel img {
-    width: 100px;
-    height: auto;
+    width: 150px;
+}
+
+.parceiros-carrossel:hover {
+    animation-play-state: paused;
+}
+
+@keyframes infiniteScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50%));
+    }
 }
