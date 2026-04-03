@@ -1,0 +1,137 @@
+body{
+    background-color: #0b0f14;
+    color: white;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0b0f14;
+
+}
+
+header nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+ /* banner */
+
+.Banner{
+    
+    background-image: url("media/images/desktop/banner_temporada_1_1080p.webp");
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top; 
+}
+
+.banner-content{
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 500px;
+
+    }
+
+    .tag{
+    background: black;
+    color: white;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+    
+    }
+
+    .btn{
+    background: red;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.assistir-area{
+    display: flex;
+    align-items: center;
+    gap: 18px; /* espaço entre botão e logo */
+    margin-top: 25px;
+}
+
+.logo-max{
+    width: 100px;
+    filter: brightness(0);
+}
+
+.logo-rm{
+    width: 600px;   
+    margin-bottom: 20px;
+}
+
+/* EPISÓDIOS */
+.card{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.explorar{
+    padding: 80px;
+    background: linear-gradient(#0b0f12, #05080a);
+    color: white;
+}
+
+.explorar h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+.thumb{
+    width: 260px;
+    height: 150px;
+    background-size: contain;   /* muda aqui */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #111;     /* fundo pra não ficar branco */
+}
+
+.info{
+    flex: 1;
+}
+
+.info h3{
+    margin-bottom: 8px;
+}
+
+.info button{
+    margin: 10px 0;
+    padding: 8px 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Episódio 1 */
+.ep1{
+    background-image: url(media/images/desktop/s1_ep1_rick.webp);
+}
+
+

@@ -6,17 +6,29 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 160px 30px;
     display: flex;
+    justify-content: center;
+    min-height: 100vh;
     flex-flow: column nowrap;
-    gap: auto;
+    padding: 160px clamp(30px, 6vw, 160px);
+    padding-bottom: 90px;
+}
+
+@media only screen and (min-width: 600px) {
+    footer .rick-and-morty-logo img{
+        width: clamp(200px, 65vw, 90%);
+    }   
+    
+    footer .rick-and-morty-logo {
+        width: clamp(200px, 65vw, 90%);
+    }   
 }
 
 .footer-container {
     display: flex;
     flex-flow: column nowrap;
-    gap: 120px;
-    max-width: 700px;
+    gap: 64px;
+    width: clamp(300px, 60vw, 2000px);
 }
 
 .footer-temp-colab-container {
@@ -33,7 +45,6 @@ footer {
 }
 
 .footer-group h3 {
-    font-size: 24px;
     padding-bottom: 12px;
     border-bottom: 2px solid var(--light-white-color);
 }
@@ -47,20 +58,26 @@ footer {
 
 #footer-lista-temporadas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    max-width: 600px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     text-align: center;
     list-style-position: inside;
     list-style: none;
-    gap: 16px;
+    gap: 32px, clamp(16px, 2vw, 90px);
+}
+
+#footer-lista-temporadas li {
+    min-width: fit-content;
 }
 
 #footer-lista-temporadas a {
     display: block;
-    padding: 16px 0px;
+    padding: 16px 16px;
     border-radius: 50px;
     background-color: #1e414a;
     transition: all .5s ease;
+    text-wrap: nowrap;
+    width: 100%;
+    font-size: clamp(16px, 1.2vw, 3rem);
 }
 
 #footer-lista-temporadas a:hover {
@@ -80,6 +97,11 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     gap: 60px;
+}
+
+footer .icon {
+    width: clamp(58px, 8vw, 100px);
+    height: clamp(58px, 8vw, 100px);
 }
 
 .social-icons {

@@ -30,13 +30,17 @@ h2 {
     text-transform: uppercase;
     font-weight: 600;
     border-bottom: 5px solid white;
-    font-size: 40px;
+    font-size: clamp(40px, 2.5vw, 5rem);
 }
 
 h3 {
-    font-size: 20px;
     font-weight: 600;
+    font-size: clamp(20px, 1.7vw, 4rem);
     text-transform: uppercase;
+}
+
+p {
+    font-size: clamp(16px, 1.3vw, 3rem);
 }
 
 .video-responsivo {

@@ -2,7 +2,7 @@
 
 header {
     position: absolute;
-    padding: 60px;
+    padding: 6vh 10vw;
     left: 0;
     right: 0;
 }
@@ -14,7 +14,7 @@ header .logos {
 }
 
 header #tr-is-logo {
-    font-size: 18px;
+    font-size: 2vh;
     font-weight: 500;
 }
 
@@ -26,7 +26,7 @@ header .as-logo {
 
 header #as-header-logo {
     filter: brightness(0) invert(90%);
-    height: 18px;
+    height: 2vh;
 }
 
 /* ======= HERO SECTION ======= */
@@ -42,35 +42,40 @@ section#hero-container {
         url(../../media/images/webp/banner_home_page_1080p.webp);
     background-repeat: no-repeat;
     background-position: 65% top;
-    height: 100dvh;
+    min-height: 100vh;
     background-size: cover;
-    padding: 60px;
-    gap: 64px;
+    padding: 5vh;
+    gap: 32px;
 }
 
-#rick-and-morty-hero-logo {
+.rick-and-morty-logo {
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+.rick-and-morty-logo img {
+    width: clamp(200px, 50vw, 300px);
 }
 
 #max-watch-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 3vh;
 }
 
 #max-watch-btn img {
     mix-blend-mode: soft-light;
     filter: brightness(0) invert(90%);
-    height: 36px;
+    height: 5vh;
 }
 
 #max-watch-btn a {
     color: var(--yellow-emphasis);
     background-color: var(--red-btn);
-    padding: 18px 25px;
-    font-size: 16px;
+    padding: 2vh 2.5vh;
+    font-size: 2vh;
     border-radius: 50px;
     text-decoration: none;
     transition: all ease 0.5s;
@@ -84,15 +89,25 @@ section#hero-container {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (min-width: 600px) {
+    .rick-and-morty-logo img {
+        width: clamp(200px, 65vw, 100vw);
+    }
+
+    #max-watch-btn {
+        flex-flow: row nowrap;
+    }
+}
+
 /* ======= INFO CONTAINER - O QUE É RICK AND MORTY =======  */
 
 #info-container {
     position: relative;
-    padding: 160px 30px;
+    padding: clamp(30px, 10vh, 160px) 30px;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    min-height: 100dvh;
+    align-items: center;
+    min-height: 100vh;
     background-image: 
         linear-gradient(to bottom, #091011 0%, #09101100 50%),
         radial-gradient(circle, #09101100 50%, #091011a7 100%);
@@ -113,12 +128,11 @@ section#hero-container {
     display: flex;
     flex-flow: column nowrap;
     background-color: var(--dark-background-0-6);
-    padding: 30px 60px;
-    width: 10;
+    padding: clamp(30px, 2vw, 5rem);
     border-radius: 30px;
     text-align: right;
-    gap: 32px;
-    max-width: 500px;
+    gap: clamp(32px, 2vh, 4vh);
+    width: clamp(500px, 100%, 50vw);
 }
 
 .info-oque-e p {
