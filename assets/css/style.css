@@ -67,7 +67,7 @@ section#hero-container {
 }
 
 #max-watch-btn img {
-    mix-blend-mode: soft-light;
+    mix-blend-mode: color-dodge;
     filter: brightness(0) invert(90%);
     height: 5vh;
 }

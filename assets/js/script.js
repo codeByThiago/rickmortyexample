@@ -80,63 +80,63 @@ const footer = document.getElementsByTagName("footer");
 
 // WebP Sequence Video
 
-const canvas = document.getElementById("webp-rick-animation");
-const context = canvas.getContext("2d");
+// const canvas = document.getElementById("webp-rick-animation");
+// // const context = canvas.getContext("2d");
 
-const frameCount = 44;
-const currentFrame = index => `media/videos/rick_walking_frames/${String(index).padStart(4, '0')}.webp`;
+// const frameCount = 44;
+// const currentFrame = index => `media/videos/rick_walking_frames/${String(index).padStart(4, '0')}.webp`;
 
-const images = [];
-const airbnb = { frame: 0 };
+// const images = [];
+// const airbnb = { frame: 0 };
 
-// Pré-carregamento
-for (let i = 0; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-    images.push(img);
-}
+// // Pré-carregamento
+// for (let i = 1; i <= frameCount; i++) {
+//     const img = new Image();
+//     img.src = currentFrame(i);
+//     images.push(img);
+// }
 
-// FORÇA O PRIMEIRO FRAME: Assim que a primeira imagem carregar, desenha ela
-images[0].onload = () => {
-    render();
-    // Faz o canvas aparecer suavemente para não dar um "pulo" visual
-    gsap.to(canvas, { opacity: 1, duration: 0.5 });
-};
+// // FORÇA O PRIMEIRO FRAME: Assim que a primeira imagem carregar, desenha ela
+// images[0].onload = () => {
+//     render();
+//     // Faz o canvas aparecer suavemente para não dar um "pulo" visual
+//     gsap.to(canvas, { opacity: 1, duration: 0.5 });
+// };
 
-function render() {
-    const img = images[airbnb.frame];
-    if (img && img.complete) {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(img, 0, 0);
-    }
-}
+// // function render() {
+// //     const img = images[airbnb.frame];
+// //     if (img && img.complete) {
+// //         canvas.width = img.width;
+// //         canvas.height = img.height;
+// //         context.clearRect(0, 0, canvas.width, canvas.height);
+// //         context.drawImage(img, 0, 0);
+// //     }
+// // }
 
-gsap.to(airbnb, {
-    frame: frameCount - 1,
-    snap: "frame", 
-    ease: "none",
-    scrollTrigger: {
-        trigger: "#info-container", 
-        start: "top top",           
-        end: "+=2000",              
-        scrub: 0.5,
-        pin: true,
-        anticipatePin: 1,
-        onUpdate: (self) => {
-            // Garante que o render rode durante o scroll
-            render();
+// gsap.to(airbnb, {
+//     frame: frameCount - 1,
+//     snap: "frame", 
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: "#info-container", 
+//         start: "top top",           
+//         end: "+=2000",              
+//         scrub: 0.5,
+//         pin: true,
+//         anticipatePin: 1,
+//         onUpdate: (self) => {
+//             // Garante que o render rode durante o scroll
+//             // render();
             
-            // Lógica extra: Se chegar no fim do scroll (progresso 1), 
-            // garante que o último frame esteja desenhado
-            if (self.progress === 1) {
-                airbnb.frame = frameCount - 1;
-                render();
-            }
-        }
-    }
-});
+//             // // Lógica extra: Se chegar no fim do scroll (progresso 1), 
+//             // // garante que o último frame esteja desenhado
+//             // if (self.progress === 1) {
+//             //     airbnb.frame = frameCount - 1;
+//             //     render();
+//             // }
+//         }
+//     }
+// });
 
-// 5. Ajuste de Responsividade (Opcional, mas recomendado)
-window.addEventListener("resize", render);
+// // 5. Ajuste de Responsividade (Opcional, mas recomendado)
+// window.addEventListener("resize", render);
