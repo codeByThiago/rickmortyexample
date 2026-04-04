@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore o multiverso de Rick and Morty! Assista ao trailer da 8ª temporada, descubra descubra curiosidades sobre Rick Sanchez e Morty Smith e reveja todas as temporadas na MAX.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main-min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-png">
@@ -124,11 +127,17 @@
                     </section>
                 </main>
                 <footer>
+                    <picture id="footer-background">
+                            <source media="(min-width: 1024px)" srcset="media/images/webp/footer_imagem_1080p.webp">
+                            <img src="media/images/webp/footer_imagem_720p.webp" aria-hidden="true">
+                        </picture>
                     <div class="footer-container">
-                        <picture class="rick-and-morty-logo">
-                                <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                        <a href="index.html">
+                            <picture class="rick-and-morty-logo">
+                                <source media="(min-width: 600px)" loading="lazy" srcset="media/logos/rick_and_morty_logo_desktop.svg">
                                 <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
                             </picture>
+                        </a>
                         <div class="footer-temp-colab-container">
                             <section class="footer-group">
                                 <h3>Temporadas</h3>
