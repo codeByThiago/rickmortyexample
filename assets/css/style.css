@@ -146,7 +146,6 @@ section#hero-container {
 /* ======= CTHULHU CONTAINER ======= */
 
 #cthullu-container {
-    background-image: url(../../media/images/jpg/cthulhu.png);
     background-position: center;
     background-size: cover;
     display: flex;
