@@ -8,206 +8,183 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <title>Rick and Morty</title>
 </head>
 <body>
     <div id="preloader-container">
-        <video id="preloader-video" autoplay playsinline muted>
-            <source src="media/videos/rick_and_morty_preloader_gif_720p.mp4" type="video/mp4">
-            <source src="media/videos/rick_and_morty_preloader_gif_480p.mp4" type="video/mp4">
+        <div class="rem-preloader">
+            <picture id="rem-preloader-logo" class="rick-and-morty-logo">
+                <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
+            </picture>
+        </div>
+        
+        <video 
+            id="preloader-video" muted playsinline preload="auto">
+            <source src="media/videos/preloader_otimizado_720p.mp4" type="video/mp4">
         </video>
     </div>
-    <div id="content-container">
-        <header>
-            <div class="logos">
-                <span id="tr-is-logo">T.R e I.S</span>
-                <div class="as-logo">
-                    <img src="media/logos/as2003_logo.svg" id="as-header-logo" alt="Logo do Adult Swin" title="Logo do Adult Swin">
-                </div>
-            </div>
-        </header>
-        <main>
-            <section id="hero-container">
-                <h1>
-                    <picture class="rick-and-morty-logo">
-                        <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
-                        <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
-                    </picture>
-                </h1>
-                <div id="max-watch-btn">
-                    <img src="media/logos/max_logo.svg" alt="Logo da Max">
-                    <a href="https://max.com">Quero assistir agora!</a>
-                </div>
-            </section>
-            <section id="info-container">
-                <div class="info-video-container">
-                    <video preload="auto" playsinline muted id="info-video">
-                        <source src="media/videos/Rick Andando 7220P.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <article class="info-oque-e">
-                    <h2>O que é Rick e Morty?</h2>
-                    <p>
-                        Rick and Morty é uma animação adulta de ficção científica que segue Rick Sanchez, um  cientista genial e alcoólatra, que retorna após 20 anos para morar com  sua filha Beth e sua família. Ele arrasta seu neto, Morty, para  aventuras perigosas, bizarras e surreais através do multiverso,  equilibrando a vida familiar com viagens interdimensionais
-                    </p>
-                </article>
-            </section>
-            <section id="cthullu-container">
-                <article class="trailer-temporada-container">
-                    <h3>Assistir ao trailer da 8ª Temporada </h3>
-                    <iframe class="video-responsivo" src="https://www.youtube.com/embed/W6TVcu1kznk?si=gu0qj1I0yFWvzaz1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </article>
-                <article class="explorar-temporadas-container">
-                    <h2>Explorar temporadas</h2>
-                    <ul class="temporadas-carrossel">
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 1">
-                        </li>
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 2">
-                        </li>
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 3">
-                        </li>
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 4">
-                        </li>
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 5">
-                        </li>
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 6">
-                        </li>
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 7">
-                        </li>
-                        <li class="temporada-card">
-                            <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 8">
-                        </li>
-                    </ul>
-                </article>
-                <section class="parceiros-container">
-                    <h3>Parceiros</h3>
-                    <ul class="parceiros-carrossel">
-                        <li>
-                            <a href="">
-                                <img src="media/logos/warner_bros_discoverylatinamerica.svg" alt="Logo da Warner Bros">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="as-logo"><img src="media/logos/as2003_logo.svg" alt="Logo do Adult Swim"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="media/logos/williams_street2020_logo.png" alt="Logo do Williams Street">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="media/logos/green_portal_logo_360p.png" alt="Logo do Green Portal">
-                            </a>
-                        </li>
-                        <a href="">
-                            <li><img src="media/logos/warner_bros_discoverylatinamerica.svg" alt="" aria-hidden="true"></li>
-                        </a>
-                        <a href="">
-                            <li><div class="as-logo"><img src="media/logos/as2003_logo.svg" alt="" aria-hidden="true"></div></li>
-                        </a>
-                        <a href="">
-                            <img src="media/logos/williams_street2020_logo.png" alt="" aria-hidden="true">
-                        </a>
-                        <a href="">
-                            <li><img src="media/logos/green_portal_logo_360p.png" alt="" aria-hidden="true"></li>
-                        </a>
-                    </ul>
-                </section>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-container">
-                <picture class="rick-and-morty-logo">
-                        <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
-                        <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
-                    </picture>
-                <div class="footer-temp-colab-container">
-                    <section class="footer-group">
-                        <h3>Temporadas</h3>
-                        <ol id="footer-lista-temporadas">
-                            <li><a href="">1ª Temporada</a></li>
-                            <li><a href="">2ª Temporada</a></li>
-                            <li><a href="">3ª Temporada</a></li>
-                            <li><a href="">4ª Temporada</a></li>
-                            <li><a href="">5ª Temporada</a></li>
-                            <li><a href="">6ª Temporada</a></li>
-                            <li><a href="">7ª Temporada</a></li>
-                            <li><a href="">8ª Temporada</a></li>
-                        </ol>
-                    </section>
-                    <div class="footer-colaboradores">
-                        <section class="footer-group">
-                            <h3>Redes Sociais (Thiago)</h3>
-                            <div class="social-icons">
-                                <a href="https://www.linkedin.com/in/thiago-rodrigues-dos-santos-53680239a/" target="_blank">
-                                    <img class="icon" src="media/icons/linkedin-in-brands-solid-full.svg" alt="Link de acesso do Linkedin do Thiago, uma das desenvolvedoras do site" title="Link do Linkedin do Thiago">
-                                </a>
-                                <a href="https://github.com/codeByThiago" target="_blank">
-                                    <img class="icon" src="media/icons/github-brands-solid-full.svg" alt="Link de acesso do Github da Thiago" title="Link do Github do Thiago">
-                                </a>
-                                <a href="https://www.instagram.com/thiago_rod77/" target="_blank">
-                                    <img class="icon" src="media/icons/instagram-brands-solid.svg" alt="Link de acesso do Instagram da Thiago, uma das desenvolvedoras do site" title="Link do Instagram do Thiago">
-                                </a>
-                            </div>
-                        </section>
-                        <section class="footer-group">
-                            <h3>Redes Sociais (Isabella)</h3>
-                            <div class="social-icons">
-                                <a href="#" target="_blank">
-                                    <img class="icon" src="media/icons/linkedin-in-brands-solid-full.svg" alt="Link de acesso do Linkedin da Isabela, uma das desenvolvedoras do site" title="Link do Linkedin da Isabela">
-                                </a>
-                                <a href="https://github.com/isabellasakamoto" target="_blank">
-                                    <img class="icon" src="media/icons/github-brands-solid-full.svg" alt="Link de acesso do Github da Isabela" title="Link do Github da Isabela">
-                                </a>
-                                <a href="#" target="_blank">
-                                    <img class="icon" src="media/icons/instagram-brands-solid.svg" alt="Link de acesso do Instagram da Isabela, uma das desenvolvedoras do site" title="Link do Instagram da Isabella">
-                                </a>
-                            </div>
-                        </section>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div id="content-container">
+                <header>
+                    <div class="logos">
+                        <span id="tr-is-logo">T.R e I.S</span>
+                        <div class="as-logo">
+                            <img src="media/logos/as2003_logo.svg" id="as-header-logo" alt="Logo do Adult Swin" title="Logo do Adult Swin">
+                        </div>
                     </div>
-                </div>
+                </header>
+                <main>
+                    <section data-speed="0.8" id="hero-container">
+                        <h1>
+                            <picture id="rick-morty-header-logo" class="rick-and-morty-logo">
+                                <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                                <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
+                            </picture>
+                        </h1>
+                        <div id="max-watch-btn">
+                            <img src="media/logos/max_logo.svg" alt="Logo da Max">
+                            <a href="https://max.com">Quero assistir agora!</a>
+                        </div>
+                    </section>
+                    <section id="info-container">
+                        <div class="info-video-container">
+                            <canvas id="webp-rick-animation"></canvas>
+                        </div>
+                        <article class="info-oque-e">
+                            <h2>O que é Rick e Morty?</h2>
+                            <p>
+                                Rick and Morty é uma animação adulta de ficção científica que segue Rick Sanchez, um  cientista genial e alcoólatra, que retorna após 20 anos para morar com  sua filha Beth e sua família. Ele arrasta seu neto, Morty, para  aventuras perigosas, bizarras e surreais através do multiverso,  equilibrando a vida familiar com viagens interdimensionais
+                            </p>
+                        </article>
+                    </section>
+                    <section id="cthullu-container">
+                        <article class="trailer-temporada-container">
+                            <h3>Assistir ao trailer da 8ª Temporada </h3>
+                            <iframe class="video-responsivo" src="https://www.youtube.com/embed/W6TVcu1kznk?si=gu0qj1I0yFWvzaz1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </article>
+                        <article class="explorar-temporadas-container">
+                            <h2>Explorar temporadas</h2>
+                            <ul class="temporadas-carrossel">
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 1">
+                                </li>
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 2">
+                                </li>
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 3">
+                                </li>
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 4">
+                                </li>
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 5">
+                                </li>
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 6">
+                                </li>
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 7">
+                                </li>
+                                <li class="temporada-card">
+                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 8">
+                                </li>
+                            </ul>
+                        </article>
+                        <section class="parceiros-container">
+                            <h3>Parceiros</h3>
+                            <ul class="parceiros-carrossel">
+                                <li>
+                                    <img src="media/logos/warner_bros_discoverylatinamerica.svg" alt="Logo da Warner Bros">
+                                </li>
+                                <li>
+                                    <div class="as-logo"><img src="media/logos/as2003_logo.svg" alt="Logo do Adult Swim"></div>
+                                </li>
+                                <li>
+                                    <img src="media/logos/williams_street2020_logo.png" alt="Logo do Williams Street">
+                                </li>
+                                <li>
+                                    <img src="media/logos/green_portal_logo_360p.png" alt="Logo do Green Portal">
+                                </li>
+                                <li>
+                                    <img src="media/logos/warner_bros_discoverylatinamerica.svg" alt="" aria-hidden="true">
+                                </li>
+                                <li>
+                                    <div class="as-logo">
+                                        <img src="media/logos/as2003_logo.svg" alt="" aria-hidden="true">
+                                    </div>
+                                </li>
+                                    <img src="media/logos/williams_street2020_logo.png" alt="" aria-hidden="true">
+                                <li>
+                                    <img src="media/logos/green_portal_logo_360p.png" alt="" aria-hidden="true">
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                </main>
+                <footer>
+                    <div class="footer-container">
+                        <picture class="rick-and-morty-logo">
+                                <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                                <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
+                            </picture>
+                        <div class="footer-temp-colab-container">
+                            <section class="footer-group">
+                                <h3>Temporadas</h3>
+                                <ol id="footer-lista-temporadas">
+                                    <li><a href="">1ª Temporada</a></li>
+                                    <li><a href="">2ª Temporada</a></li>
+                                    <li><a href="">3ª Temporada</a></li>
+                                    <li><a href="">4ª Temporada</a></li>
+                                    <li><a href="">5ª Temporada</a></li>
+                                    <li><a href="">6ª Temporada</a></li>
+                                    <li><a href="">7ª Temporada</a></li>
+                                    <li><a href="">8ª Temporada</a></li>
+                                </ol>
+                            </section>
+                            <div class="footer-colaboradores">
+                                <section class="footer-group">
+                                    <h3>Redes Sociais (Thiago)</h3>
+                                    <div class="social-icons">
+                                        <a href="https://www.linkedin.com/in/thiago-rodrigues-dos-santos-53680239a/" target="_blank">
+                                            <img class="icon" src="media/icons/linkedin-in-brands-solid-full.svg" alt="Link de acesso do Linkedin do Thiago, uma das desenvolvedoras do site" title="Link do Linkedin do Thiago">
+                                        </a>
+                                        <a href="https://github.com/codeByThiago" target="_blank">
+                                            <img class="icon" src="media/icons/github-brands-solid-full.svg" alt="Link de acesso do Github da Thiago" title="Link do Github do Thiago">
+                                        </a>
+                                        <a href="https://www.instagram.com/thiago_rod77/" target="_blank">
+                                            <img class="icon" src="media/icons/instagram-brands-solid.svg" alt="Link de acesso do Instagram da Thiago, uma das desenvolvedoras do site" title="Link do Instagram do Thiago">
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="footer-group">
+                                    <h3>Redes Sociais (Isabella)</h3>
+                                    <div class="social-icons">
+                                        <a href="#" target="_blank">
+                                            <img class="icon" src="media/icons/linkedin-in-brands-solid-full.svg" alt="Link de acesso do Linkedin da Isabela, uma das desenvolvedoras do site" title="Link do Linkedin da Isabela">
+                                        </a>
+                                        <a href="https://github.com/isabellasakamoto" target="_blank">
+                                            <img class="icon" src="media/icons/github-brands-solid-full.svg" alt="Link de acesso do Github da Isabela" title="Link do Github da Isabela">
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img class="icon" src="media/icons/instagram-brands-solid.svg" alt="Link de acesso do Instagram da Isabela, uma das desenvolvedoras do site" title="Link do Instagram da Isabella">
+                                        </a>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
-        </footer>
+        </div>
     </div>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        const video = document.querySelector("#info-video");
-
-        // Espera metadados do vídeo carregarem
-        video.addEventListener("loadedmetadata", () => {
-
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#info-container",
-                    start: "top top",
-                    end: "bottom+=500 top",
-                    scrub: true,
-                    pin: true,
-                    markers: false // true = debug
-                }
-            });
-
-            // anima o tempo do vídeo
-            tl.to(video, {
-                currentTime: video.duration,
-                ease: "none"
-            });
-        });
-    </script>
-    <script src="assets/js/preloader.js"></script>
-    <script src="assets/js/video-interativo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js"></script>
+    
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
