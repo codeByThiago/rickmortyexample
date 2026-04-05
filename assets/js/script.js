@@ -102,24 +102,23 @@ gsap.from(".temporada-card", {
     scrollTrigger: {
         trigger: ".temporadas-carrossel",
         scrub: true,
-        start: "0% 80%",
-        end: "100% 80%"
+        start: "0% 100%",
+        end: "30% 80%"
     }
 })
 
 // ANIMAÇÕES NO FOOTER
 
-// gsap.to("footer", {
-//     y: "-50%",
-//     immediateRender: false,
-//     scrollTrigger: {
-//         trigger: "footer",
-//         scrub: true,
-//         markers: true,
-//         end: "100% 100%",
-//         invalidateOnRefresh: true,
-//     }
-// })
+gsap.from("footer", {
+    y: "-30%",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: "footer",
+        scrub: true,
+        end: "100% 100%",
+        invalidateOnRefresh: true,
+    }
+})
 
 // SLIDER DE TEMPORADAS
 

@@ -177,8 +177,7 @@ section#hero-container::after {
 /* ======= CTHULHU CONTAINER ======= */
 
 #cthullu-container {
-    background-position: center;
-    background-size: cover;
+    background-color: #091011;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
