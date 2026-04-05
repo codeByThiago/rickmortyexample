@@ -192,12 +192,10 @@ section#hero-container {
 .temporadas-carrossel {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
     gap: 30px;
-    padding: 0 20px;
+    padding: 30px 20px;
     list-style: none;
     overflow-x: auto;
-    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
