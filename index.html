@@ -68,32 +68,38 @@
                         </article>
                         <article class="explorar-temporadas-container">
                             <h2>Explorar temporadas</h2>
-                            <ul class="temporadas-carrossel">
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 1">
-                                </li>
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 2">
-                                </li>
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 3">
-                                </li>
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 4">
-                                </li>
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 5">
-                                </li>
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 6">
-                                </li>
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 7">
-                                </li>
-                                <li class="temporada-card">
-                                    <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Card Temporada 8">
-                                </li>
-                            </ul>
+                            <div class="carrossel">
+                                <ul class="temporadas-carrossel">
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 1">
+                                    </li>
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 2">
+                                    </li>
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 3">
+                                    </li>
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 4" loading="lazy">
+                                    </li>
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 5" loading="lazy">
+                                    </li>
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 6" loading="lazy">
+                                    </li>
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 7" loading="lazy">
+                                    </li>
+                                    <li class="temporada-card">
+                                        <img src="media/images/webp/banner_temporada_1_1080p.webp" alt="Temporada 8" loading="lazy">
+                                    </li>
+                                </ul>
+                                <div class="controles-carrossel">
+                                    <button class="proximo" onclick="document.querySelector('.temporadas-carrossel').scrollBy({left: 300, behavior: 'smooth'})"><img src="media/icons/angle-right-solid.svg" alt="Botão de Próximo Slide"></button>
+                                    <button class="voltar" onclick="document.querySelector('.temporadas-carrossel').scrollBy({left: -300, behavior: 'smooth'})"><img src="media/icons/angle-left-solid.svg" alt="Botão de Voltar Slide"></button>
+                                </div>
+                            </div>
                         </article>
                         <section class="parceiros-container">
                             <h3>Parceiros</h3>

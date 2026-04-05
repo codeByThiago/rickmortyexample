@@ -78,65 +78,38 @@ gsap.to("#hero-container", {
 
 const footer = document.getElementsByTagName("footer");
 
-// WebP Sequence Video
+const slider = document.querySelector('.temporadas-carrossel');
+let isDown = false;
+let startX;
+let scrollLeft;
 
-// const canvas = document.getElementById("webp-rick-animation");
-// // const context = canvas.getContext("2d");
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    // Posição inicial do clique
+    startX = e.pageX - slider.offsetLeft;
+    // Quanto de scroll já existia
+    scrollLeft = slider.scrollLeft;
+    // Muda o cursor para "agarrando"
+    slider.style.cursor = 'grabbing';
+});
 
-// const frameCount = 44;
-// const currentFrame = index => `media/videos/rick_walking_frames/${String(index).padStart(4, '0')}.webp`;
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.style.cursor = 'grab';
+});
 
-// const images = [];
-// const airbnb = { frame: 0 };
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.style.cursor = 'grab';
+});
 
-// // Pré-carregamento
-// for (let i = 1; i <= frameCount; i++) {
-//     const img = new Image();
-//     img.src = currentFrame(i);
-//     images.push(img);
-// }
-
-// // FORÇA O PRIMEIRO FRAME: Assim que a primeira imagem carregar, desenha ela
-// images[0].onload = () => {
-//     render();
-//     // Faz o canvas aparecer suavemente para não dar um "pulo" visual
-//     gsap.to(canvas, { opacity: 1, duration: 0.5 });
-// };
-
-// // function render() {
-// //     const img = images[airbnb.frame];
-// //     if (img && img.complete) {
-// //         canvas.width = img.width;
-// //         canvas.height = img.height;
-// //         context.clearRect(0, 0, canvas.width, canvas.height);
-// //         context.drawImage(img, 0, 0);
-// //     }
-// // }
-
-// gsap.to(airbnb, {
-//     frame: frameCount - 1,
-//     snap: "frame", 
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: "#info-container", 
-//         start: "top top",           
-//         end: "+=2000",              
-//         scrub: 0.5,
-//         pin: true,
-//         anticipatePin: 1,
-//         onUpdate: (self) => {
-//             // Garante que o render rode durante o scroll
-//             // render();
-            
-//             // // Lógica extra: Se chegar no fim do scroll (progresso 1), 
-//             // // garante que o último frame esteja desenhado
-//             // if (self.progress === 1) {
-//             //     airbnb.frame = frameCount - 1;
-//             //     render();
-//             // }
-//         }
-//     }
-// });
-
-// // 5. Ajuste de Responsividade (Opcional, mas recomendado)
-// window.addEventListener("resize", render);
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return; // Só roda se o mouse estiver pressionado
+    e.preventDefault();
+    
+    const x = e.pageX - slider.offsetLeft;
+    // Multiplique por 2 ou 3 para aumentar a velocidade do arraste
+    const walk = (x - startX) * 2; 
+    slider.scrollLeft = scrollLeft - walk;
+});

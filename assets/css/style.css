@@ -184,23 +184,26 @@ section#hero-container {
     flex-flow: column nowrap;
     gap: 24px;
     width: 100%;
-    padding: 60px 0 60px 60px; 
+    padding: clamp(30px, 5vw, 160px); 
     overflow: hidden;
 }
+
 
 .temporadas-carrossel {
     display: flex;
     flex-wrap: nowrap;
+    overflow: hidden;
     gap: 30px;
-    padding: 20px 0;
+    padding: 0 20px;
     list-style: none;
-    
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    
-    scrollbar-width: none; 
+    scrollbar-width: none;
     -ms-overflow-style: none; 
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .temporadas-carrossel::-webkit-scrollbar {
@@ -210,7 +213,7 @@ section#hero-container {
 .temporada-card {
     flex: 0 0 auto;
     scroll-snap-align: start;
-    width: clamp(200px, 20vw, 300px);
+    width: clamp(200px, 20vw, 500px);
     border-radius: 15px;
     transition: transform 0.3s ease;
     cursor: grab;
@@ -233,6 +236,50 @@ section#hero-container {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     pointer-events: none; 
+}
+
+.carrossel {
+    position: relative;
+    border-radius: 20px;
+}
+
+.proximo, .voltar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 0;
+    border: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.201);
+    width: clamp(50px, 4vw, 120px);
+    height: clamp(50px, 4vw, 120px);
+    margin: 0 2vw;
+    border-radius: 50%;
+    z-index: 99;
+    transition: all .3s ease-in-out;
+
+    img {
+        filter: invert(40%);
+        width: clamp(18px, 2vw, 55px);
+    }
+}
+
+.proximo {
+    right: 0
+}
+
+.voltar {
+    left: 0
+}
+
+.proximo:hover, .voltar:hover {
+    background-color: #eaeaea;
+    transform: scale(1.05) translateY(-50%);
+    cursor: pointer;
+    top: 50%;
 }
 
 /* ======= PARCEIROS ======= */

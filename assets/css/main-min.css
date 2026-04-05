@@ -63,6 +63,7 @@ p {
 footer {
     position: relative;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     min-height: 100vh;
     padding: 160px clamp(30px, 6vw, 160px) 90px; 
