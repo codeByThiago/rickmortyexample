@@ -108,6 +108,7 @@ p {
 
 
 .explorar-temporadas {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     gap: 48px;
