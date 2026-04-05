@@ -15,14 +15,14 @@
 <body>
     <div id="preloader-container">
         <div class="rem-preloader">
-            <picture id="rem-preloader-logo" class="rick-and-morty-logo">
+            <picture fetchpriority="high" id="rem-preloader-logo" class="rick-and-morty-logo">
                 <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
                 <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
             </picture>
         </div>
         
         <video 
-            id="preloader-video" muted playsinline preload="auto">
+            id="preloader-video" muted playsinline preload="metadata">
             <source src="media/videos/preloader_otimizado_720p.mp4" type="video/mp4">
         </video>
     </div>
