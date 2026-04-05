@@ -13,41 +13,41 @@ const logoPulse = gsap.to("#rem-preloader-logo", {
     ease: "power1.inOut"
 });
 
-// document.body.style.overflow = 'hidden';
+document.body.style.overflow = 'hidden';
 
-// window.addEventListener('load', () => {
-//     const video = document.querySelector('#preloader-video');
-//     const tl = gsap.timeline();
+window.addEventListener('load', () => {
+    const video = document.querySelector('#preloader-video');
+    const tl = gsap.timeline();
 
-//     tl.to("#rem-preloader-logo", {
-//         opacity: 0,
-//         scale: 1.5,
-//         duration: 0.5,
-//         onStart: () => {
-//             logoPulse.kill(); 
-//         },
-//         onComplete: () => {
-//             video.play();
-//         }
-//     })
-//     .to("#preloader-video", {
-//         opacity: 1,
-//         duration: 0.3
-//     })
-//     .to("#preloader-container", {
-//         yPercent: -100,
-//         duration: 1.5,
-//         ease: "power4.inOut",
-//         delay: 2, 
-//         onStart: () => {
-//             startMainAnimations();
-//         },
-//         onComplete: () => {
-//             document.getElementById("preloader-container").style.display = "none";
-//             document.body.style.overflow = 'auto';
-//         }
-//     });
-// });
+    tl.to("#rem-preloader-logo", {
+        opacity: 0,
+        scale: 1.5,
+        duration: 0.5,
+        onStart: () => {
+            logoPulse.kill(); 
+        },
+        onComplete: () => {
+            video.play();
+        }
+    })
+    .to("#preloader-video", {
+        opacity: 1,
+        duration: 0.3
+    })
+    .to("#preloader-container", {
+        yPercent: -100,
+        duration: 1.5,
+        ease: "power4.inOut",
+        delay: 2, 
+        onStart: () => {
+            startMainAnimations();
+        },
+        onComplete: () => {
+            document.getElementById("preloader-container").style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
 
 function startMainAnimations() {
     const contentTl = gsap.timeline();
