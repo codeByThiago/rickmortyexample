@@ -37,18 +37,43 @@ section#hero-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image:
-        radial-gradient(circle at 50% 40%, #09101100 0%, #0910116e 78%),
-        linear-gradient(to bottom, #09101100 76%, #091011 94%),
-        url(../../media/images/webp/banner_home_page_1080p.webp);
-    background-repeat: no-repeat;
-    background-position: 65% top;
     min-height: 100vh;
-    background-size: cover;
     padding: 5vh;
     gap: 32px;
     position: relative;
     z-index: 99;
+    overflow: hidden;
+}
+
+section#hero-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 50% 40%, #09101100 0%, #0910116e 78%),
+        linear-gradient(to bottom, #09101100 76%, #091011 94%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+#hero-background {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+#hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% top;
+    z-index: -10;
 }
 
 .rick-and-morty-header-logo {
@@ -129,7 +154,6 @@ section#hero-container {
     position: absolute;
     top: 50%;
     width: clamp(300px, 40vw, 1000px);
-    transform: translateY(-50%);
 }
 
 .info-oque-e {

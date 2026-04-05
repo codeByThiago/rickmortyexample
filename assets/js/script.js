@@ -13,41 +13,41 @@ const logoPulse = gsap.to("#rem-preloader-logo", {
     ease: "power1.inOut"
 });
 
-document.body.style.overflow = 'hidden';
+// document.body.style.overflow = 'hidden';
 
-window.addEventListener('load', () => {
-    const video = document.querySelector('#preloader-video');
-    const tl = gsap.timeline();
+// window.addEventListener('load', () => {
+//     const video = document.querySelector('#preloader-video');
+//     const tl = gsap.timeline();
 
-    tl.to("#rem-preloader-logo", {
-        opacity: 0,
-        scale: 1.5,
-        duration: 0.5,
-        onStart: () => {
-            logoPulse.kill(); 
-        },
-        onComplete: () => {
-            video.play();
-        }
-    })
-    .to("#preloader-video", {
-        opacity: 1,
-        duration: 0.3
-    })
-    .to("#preloader-container", {
-        yPercent: -100,
-        duration: 1.5,
-        ease: "power4.inOut",
-        delay: 2, 
-        onStart: () => {
-            startMainAnimations();
-        },
-        onComplete: () => {
-            document.getElementById("preloader-container").style.display = "none";
-            document.body.style.overflow = 'auto';
-        }
-    });
-});
+//     tl.to("#rem-preloader-logo", {
+//         opacity: 0,
+//         scale: 1.5,
+//         duration: 0.5,
+//         onStart: () => {
+//             logoPulse.kill(); 
+//         },
+//         onComplete: () => {
+//             video.play();
+//         }
+//     })
+//     .to("#preloader-video", {
+//         opacity: 1,
+//         duration: 0.3
+//     })
+//     .to("#preloader-container", {
+//         yPercent: -100,
+//         duration: 1.5,
+//         ease: "power4.inOut",
+//         delay: 2, 
+//         onStart: () => {
+//             startMainAnimations();
+//         },
+//         onComplete: () => {
+//             document.getElementById("preloader-container").style.display = "none";
+//             document.body.style.overflow = 'auto';
+//         }
+//     });
+// });
 
 function startMainAnimations() {
     const contentTl = gsap.timeline();
@@ -73,10 +73,27 @@ gsap.to("#hero-container", {
     }
 })
 
+gsap.set(".info-video-container img", {
+    y: "-50%"
+})
+
+gsap.from(".info-video-container img", {
+    x: "-200%",
+    rotate: "180degree",
+    filter: "blur(10px)",
+    scale: .5,
+    y: "-80%",
+    scrollTrigger: {
+        start: "10%, 10%",
+        end: "20% 20%",
+        scrub: true
+    }
+})
+
 
 // ANIMAÇÕES NO FOOTER
 
-const footer = document.getElementsByTagName("footer");
+// SLIDER DE TEMPORADAS
 
 const slider = document.querySelector('.temporadas-carrossel');
 let isDown = false;
@@ -85,12 +102,9 @@ let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
-    slider.classList.add('active');
-    // Posição inicial do clique
+    slider.classList.add('active')
     startX = e.pageX - slider.offsetLeft;
-    // Quanto de scroll já existia
     scrollLeft = slider.scrollLeft;
-    // Muda o cursor para "agarrando"
     slider.style.cursor = 'grabbing';
 });
 
@@ -105,11 +119,10 @@ slider.addEventListener('mouseup', () => {
 });
 
 slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return; // Só roda se o mouse estiver pressionado
+    if (!isDown) return;
     e.preventDefault();
     
     const x = e.pageX - slider.offsetLeft;
-    // Multiplique por 2 ou 3 para aumentar a velocidade do arraste
     const walk = (x - startX) * 2; 
     slider.scrollLeft = scrollLeft - walk;
 });
