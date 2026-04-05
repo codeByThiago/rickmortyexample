@@ -73,6 +73,8 @@ gsap.to("#hero-container", {
     }
 })
 
+// INFO CONTAINER
+
 gsap.set(".info-video-container img", {
     y: "-50%"
 })
@@ -84,14 +86,40 @@ gsap.from(".info-video-container img", {
     scale: .5,
     y: "-80%",
     scrollTrigger: {
-        start: "10%, 10%",
-        end: "20% 20%",
+        trigger: "#info-container",
+        start: "10%, 80%",
+        end: "100% 100%",
         scrub: true
     }
 })
 
+// EXPLORAR TEMPORADAS
+gsap.from(".temporada-card", {
+    opacity: 0,
+    y: 10,
+    stagger: .2,
+    filter: "blur(10px)",
+    scrollTrigger: {
+        trigger: ".temporadas-carrossel",
+        scrub: true,
+        start: "0% 80%",
+        end: "100% 80%"
+    }
+})
 
 // ANIMAÇÕES NO FOOTER
+
+// gsap.to("footer", {
+//     y: "-50%",
+//     immediateRender: false,
+//     scrollTrigger: {
+//         trigger: "footer",
+//         scrub: true,
+//         markers: true,
+//         end: "100% 100%",
+//         invalidateOnRefresh: true,
+//     }
+// })
 
 // SLIDER DE TEMPORADAS
 
