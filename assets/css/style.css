@@ -207,8 +207,7 @@ section#hero-container::after {
     flex-flow: column nowrap;
     gap: 24px;
     width: 100%;
-    padding: clamp(30px, 5vw, 160px); 
-    overflow: hidden;
+    padding: clamp(30px, 5vw, 160px);
 }
 
 
@@ -246,7 +245,7 @@ section#hero-container::after {
 
 .temporada-card:hover {
     transform: scale(1.05);
-    z-index: 2;
+    z-index: 3;
 }
 
 .temporada-card img {
@@ -315,26 +314,14 @@ section#hero-container::after {
 
 .parceiros-carrossel {
     display: flex;
+    flex-flow: row wrap;
     list-style: none;
     align-items: center;
+    justify-content: center;
     gap: 100px;
-    width: max-content;
-    animation: infiniteScroll 20s linear infinite;
+    width: 100%;
 }
 
 .parceiros-carrossel img {
-    width: 150px;
-}
-
-.parceiros-carrossel:hover {
-    animation-play-state: paused;
-}
-
-@keyframes infiniteScroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(calc(-50%));
-    }
+    width: clamp(150px, 15vw, 500px);
 }
