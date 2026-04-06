@@ -99,8 +99,8 @@ section#hero-container::after {
 }
 
 #max-watch-btn a {
-    color: var(--light-white-color);
-    background-color: var(--blue-btn);
+    color: var(--yellow-emphasis);
+    background-color: var(--red-btn);
     padding: 2vh 2.5vh;
     font-size: 2vh;
     border-radius: 50px;
@@ -110,7 +110,7 @@ section#hero-container::after {
 
 #max-watch-btn a:hover {
     font-weight: 500;
-    background-color: rgb(23, 15, 77);
+    background-color: rgb(255, 37, 37);
     transform: scale(1.05);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }

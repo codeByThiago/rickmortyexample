@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText);
+gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText,ScrollToPlugin);
 
 ScrollSmoother.create({
     smooth: 2,
@@ -28,3 +28,16 @@ menuHamburguer.addEventListener('click', () => {
         headerNav.classList.add('ativo');
     }
 });
+
+
+function redirecionar() {
+    const select = document.querySelector(".select-wrapper select");
+
+    let url = select.value;
+
+    window.location.href = url;    
+}
+
+document.getElementById("scroll-explorar-temporadas").addEventListener('click', () => {
+    gsap.to(window, { duration: .2, scrollTo: "#explorar-temporadas" });
+})

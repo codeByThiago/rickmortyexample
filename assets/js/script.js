@@ -120,4 +120,10 @@ gsap.from("footer", {
     }
 })
 
-// SLIDER DE TEMPORADAS
+function redirecionar() {
+    const select = document.querySelector(".select-wrapper select");
+
+    let url = select.value;
+
+    window.location.href = url;    
+}
