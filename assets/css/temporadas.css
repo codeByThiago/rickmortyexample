@@ -7,9 +7,10 @@ body {
 header {
     display: flex;
     flex-flow: column nowrap;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     gap: 32px;
     padding: 20px 50px;
     background-color: #0b0f14;
