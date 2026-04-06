@@ -93,20 +93,6 @@ gsap.from(".info-video-container img", {
     }
 })
 
-// EXPLORAR TEMPORADAS
-gsap.from(".temporada-card", {
-    opacity: 0,
-    y: 10,
-    stagger: .2,
-    filter: "blur(10px)",
-    scrollTrigger: {
-        trigger: ".temporadas-carrossel",
-        scrub: true,
-        start: "0% 100%",
-        end: "30% 80%"
-    }
-})
-
 // ANIMAÇÕES NO FOOTER
 
 gsap.from("footer", {
