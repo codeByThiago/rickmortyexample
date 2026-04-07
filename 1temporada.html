@@ -2,207 +2,309 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 
-    initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/globals.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore todos os episódios de Rick and Morty, sinopses completas, datas de lançamento e acesso rápido para assistir cada temporada da série.">
+    <link rel="stylesheet" href="assets/css/main-min.css">
     <link rel="stylesheet" href="assets/css/temporadas.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-png">
-    <title>Temporada 1</title>
+    <title>Rick and Morty - Temporada 1</title>
 </head>
 <body>
     <header>
-        <div class="logo">T.R e I.S</div>
+        <div class="header-logo-menu">
+            <div class="tr-is-logo">T.R e I.S</div>
+            <div class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <nav>
-            <a href="#">Início</a>
-            <a href="#">Explorar Temporadas</a>
-            <a href="https://play.hbomax.com/show/ab553cdc-e15d-4597-b65f-bec9201fd2dd" 
-            target="_blank">
-            Assistir no Max </a>
+            <a href="index.html">Início</a>
+            <button id="scroll-explorar-temporadas">Explorar Temporadas</button>
+            <a href="https://play.hbomax.com/show/ab553cdc-e15d-4597-b65f-bec9201fd2dd" target="_blank">Assistir no Max </a>
         </nav>
     </header>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <section data-speed="0.7" class="banner">
+                    <picture class="banner-background">
+                        <source media="(min-width: 1024px)" srcset="media/images/webp/banner_temporada_1_720p.webp">
+                        <img src="media/images/webp/banner_temporada_1_720p.webp" alt="" aria-hidden="true">
+                    </picture>
+                    <div class="banner-content">
+                        <div class="temporada-title">
+                            <span class="tag">TEMPORADA 1</span>
+                            <picture class="rick-and-morty-logo logo-rm">
+                                <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                                <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty" title="Logo do Rick e Morty">
+                            </picture>
+                        </div>
+                        <div id="max-watch-btn">
+                            <img src="media/logos/max_logo.svg" alt="Logo da Max">
+                            <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd" target="_blank">Quero assistir agora!</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="explorar-temporadas" id="explorar-temporadas">
+                    <div class="title-select">
+                        <h2>EXPLORAR TEMPORADAS</h2>
+                        <label for="temporadas-select" class="sr-only">Selecione a Temporada</label>
+                        <div class="select-wrapper">
+                            <select onchange="redirecionar()" name="temporadas-select" id="temporadas-select">
+                                <option value="#" selected>Temporada 1</option>
+                                <option value="2temporada.html">Temporada 2</option>
+                                <option value="3temporada.html">Temporada 3</option>
+                                <option value="4temporada.html">Temporada 4</option>
+                                <option value="5temporada.html" >Temporada 5</option>
+                                <option value="6temporada.html">Temporada 6</option>
+                                <option value="7temporada.html">Temporada 7</option>
+                                <option value="8temporada.html">Temporada 8</option>
+                            </select>
+                            <img src="media/icons/angle-down-solid.svg" alt="" aria-hidden="true">
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep1_temp1.jpg" alt="Thumbnail Episódio 1, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>1. Pilot</h3>
+                                    <p>23min • 02/12/2013</p>
+                                    <a href="https://play.hbomax.com/video/watch/ef7d1c40-2ecc-471a-81a5-7fe06400240a/3a08cc38-df63-40a8-a300-dede99139409" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Um cientista sociopata arrasta seu neto inocente para perigosas aventuras interdimensionais.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep2_temp1.webp" alt="Thumbnail Episódio 2, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>2. Lawnmower Dog</h3>
+                                    <p>23min • 09/12/2013</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e2-lawnmower-dog/98f5603d-7461-4968-8399-72da5d9302d8" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Rick ajuda Jerry com seu cachorro.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep3_temp1.webp" alt="Thumbnail Episódio 3, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>3. Anatomy Park</h3>
+                                    <p>23min • 16/12/2013</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e3-anatomy-park/fcc7d036-2a20-4f3d-b20b-1bd1a2f23672" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Rick injeta Morty em um homem para salvar Anatomy Park. Jerry quer um natal sem tecnologia. 
+                                    Ele lamenta quando seus pais o apresentam ao amigo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep4_temp1.webp" alt="Thumbnail Episódio 4, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>4. M. Night Shaym-Aliens!</h3>
+                                    <p>22min • 13/01/2014</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e4-m-night-shaym-aliens/0cd59b30-b1bf-44cd-8f91-389ba3ff1f6f" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Rick e Morty tentam chegar ao fundo de um mistério neste episódio estilo M. Night Shyamalan.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep5_temp1.webp" alt="Thumbnail Episódio 5, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>5. Meeseeks and Destroy</h3>
+                                    <p>23min • 20/01/2013</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e5-meeseeks-and-destroy/4b41ae32-b26c-4ca3-bc31-6fbc4b560805" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Rick proporciona à família uma solução para seus problemas, 
+                                    ficando liberado para ir a uma aventura liderada por Morty.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep6_temp1.webp" alt="Thumbnail Episódio 6, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>6. Rick Potion #9</h3>
+                                    <p>22min • 27/01/2014</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e6-rick-potion-9/da2dc9d2-548f-4be4-9224-d6628553b189" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                   Rick oferece a Morty uma poção de amor para conquistar Jessica.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep7_temp1.webp" alt="Thumbnail Episódio 7, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>7. Raising Gazorpazorp</h3>
+                                    <p>23min • 10/03/2014</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e7-raising-gazorpazorp/3fb72f2c-572f-41b3-b425-3f5b9df359b9" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Morty se transforma no pai de um bebê extraterrestre, enquanto Rick e Summer ficam presos em uma dimensão perigosa.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep8_temp1.webp" alt="Thumbnail Episódio 8, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>8. Rixty Minutes</h3>
+                                    <p>22min • 17/03/2014</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e8-rixty-minutes/9809c756-ab44-4381-b2a1-7dd4ff50e676" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Rick conecta a TV da família ao cabo interdimensional, o que permite ver a televisão infinita de todo o multiverso.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep9_temp1.webp" alt="Thumbnail Episódio 9, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>9. Something Ricked This Way Comes</h3>
+                                    <p>23min • 24/03/2014</p>
+                                    <a href= "https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e9-something-ricked-this-way-comes/86bd4e6b-fa36-4013-b328-a3d8980deffc" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Summer consegue um trabalho em uma loja de penhora cujo proprietário é o Diabo. Jerry ajuda Morty no seu projeto de ciências.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep10_temp1.webp" alt="Thumbnail Episódio 10, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>10. Close Rick-Counters of the Rick Kind</h3>
+                                    <p>23min • 07/04/2014</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e10-close-rick-counters-of-the-rick-kind/2e0753e0-6d81-4181-87d0-c2d5c6db93de" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Rick tem um encontro com antigos parceiros, o que acaba se tornando um problema com Morty.
+                                </p>
+                            </div>
+                        </div>
 
-    <!-- Banner -->
-     <section class="Banner">
-        
-        <div class="banner-content">
-            <span class="tag">TEMPORADA 1</span>
-            <img src="assets/css/media/logos/rick_and_morty_logo.svg" class="logo-rm">
+                        <div class="card">
+                            <div class="thumb-info">
+                                <img src="media/thumbs/thumb_ep11_temp1.webp" alt="Thumbnail Episódio 11, Temporada 1" class="thumb">
+                                <div class="info">
+                                    <h3>11. Ricksy Business </h3>
+                                    <p>23min • 14/04/2014</p>
+                                    <a href="https://www.hbomax.com/br/pt/shows/rick-morty/s1/ab553cdc-e15d-4597-b65f-bec9201fd2dd/e11-ricksy-business/3aa7e642-4946-46a1-a724-17e7e4b717d0" target="_blank">Assistir</a>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>
+                                    Beth e Jerry vão a um encontro deixando Rick no comando. 
+                                    Morty não aceita ir a novas aventuras se a casa não estiver nas mesmas condições na volta.
+                                </p>
+                            </div>
+                        </div>
 
-            <div class="assistir-area">
-            <a href="https://play.hbomax.com/show/ab553cdc-e15d-4597-b65f-bec9201fd2dd"
-             target="_blank" class="btn">Assistir Primeira Temporada</a>
-             <img src="assets/css/media/logos/max_logo.svg" class="logo-max">
-             </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <picture id="footer-background">
+                    <source media="(min-width: 1024px)" srcset="media/images/webp/footer_imagem_1080p.webp">
+                    <img src="media/images/webp/footer_imagem_720p.webp" alt="" aria-hidden="true" loading="lazy">
+                </picture>
+                <div class="footer-container">
+                    <picture id="rick-and-morty-footer-logo">
+                            <source media="(min-width: 600px)" srcset="media/logos/rick_and_morty_logo_desktop.svg">
+                            <img src="media/logos/rick_and_morty_logo_mobile.svg" alt="Logo do Rick e Morty">
+                        </picture>
+                    <div class="footer-temp-colab-container">
+                        <section class="footer-group">
+                            <h3>Temporadas</h3>
+                            <ol id="footer-lista-temporadas">
+                                <li><a href="1temporada.html">1ª Temporada</a></li>
+                                <li><a href="2temporada.html">2ª Temporada</a></li>
+                                <li><a href="3temporada.html">3ª Temporada</a></li>
+                                <li><a href="4temporada.html">4ª Temporada</a></li>
+                                <li><a href="5temporada.html">5ª Temporada</a></li>
+                                <li><a href="6temporada.html">6ª Temporada</a></li>
+                                <li><a href="7temporada.html">7ª Temporada</a></li>
+                                <li><a href="8temporada.html">8ª Temporada</a></li>
+                            </ol>
+                        </section>
+                        <div class="footer-colaboradores">
+                            <section class="footer-group">
+                                <h3>Redes Sociais (Thiago)</h3>
+                                <div class="social-icons">
+                                    <a href="https://www.linkedin.com/in/thiago-rodrigues-dos-santos-53680239a/" target="_blank">
+                                        <img class="icon" src="media/icons/linkedin-in-brands-solid-full.svg" alt="LinkedIn Thiago">
+                                    </a>
+                                    <a href="https://github.com/codeByThiago" target="_blank">
+                                        <img class="icon" src="media/icons/github-brands-solid-full.svg" alt="GitHub Thiago">
+                                    </a>
+                                    <a href="https://www.instagram.com/thiago_rod77/" target="_blank">
+                                        <img class="icon" src="media/icons/instagram-brands-solid.svg" alt="Instagram Thiago">
+                                    </a>
+                                </div>
+                            </section>
+                            <section class="footer-group">
+                                <h3>Redes Sociais (Isabella)</h3>
+                                <div class="social-icons">
+                                    <a href="https://www.linkedin.com/in/isabella-sakamoto-359699400/" target="_blank">
+                                        <img class="icon" src="media/icons/linkedin-in-brands-solid-full.svg" alt="LinkedIn Isabella">
+                                    </a>
+                                    <a href="https://github.com/isabellasakamoto" target="_blank">
+                                        <img class="icon" src="media/icons/github-brands-solid-full.svg" alt="GitHub Isabella">
+                                    </a>
+                                    <a href="https://www.instagram.com/mieiko.isabella/" target="_blank">
+                                        <img class="icon" src="media/icons/instagram-brands-solid.svg" alt="Instagram Isabella">
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-     </section>
+    </div>
 
-     <!-- Episódios -->
-      <section class="explorar">
-        <h2>EXPLORAR TEMPORADAS</h2>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollToPlugin.min.js"></script>
     
-        <div class="card">
-            <div class="thumb ep1"></div>
-            <div class="info">
-                <h3>1.Piloto</h3>
-                <p>22:19min . 02/12/2013</p>
-                <button>Assistir</button>
-                <p class="desc">Rick leva sseu neto Morty para outra dimensão para encontrar sementes para 
-                    "mega-árvores, enquanto Jerry e Beth discutem a influência de
-                     Rick sobre seu filho.</p>
-
-
-            </div>
-        </div>
-
-         <div class="card">
-            <div class="thumb ep2"></div>
-            <div class="info">
-                <h3>2.Cãortador de Grama </h3>
-                <p>22min . 09/12/2013</p>
-                <button>Assistir</button>
-                <p class="desc">Rick ajuda Jerry com seu cachorro; Rick e Morty
-                     tentam interceptar os
-                     sonhos do Sr. Goldenfold, o professor de matemática.</p>
-                     
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="thumb ep3"></div>
-            <div class="info">
-                <h3>3.Parque das Bactérias</h3>
-                <p>22min . 15/12/2013</p>
-                <button>Assistir</button>
-                <p class="desc">É Natal. Rick encolhe Morty e o injeta em um homem sem teto para salvar o Anatomy Park,
-                     um parque de diversões em miniatura; Jerry tenta ter um Natal sem aparelhos eletrônicos, 
-                    mas lamenta sua decisão quando seus pais lhe apresentam um novo amigo.</p>
-                     
-
-            </div>
-        </div>
-
-         <div class="card">
-            <div class="thumb ep4"></div>
-            <div class="info">
-                <h3>4.M. Night Shaym - Aliens!</h3>
-                <p>22min . 13/01/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Em uma tentativa de roubar a receita de Rick para matéria escura concentrada, 
-                    alienígenas transportam Rick, Morty e Jerry para uma realidade alternativa; 
-                    um Jerry alheio tenta lançar um slogan de marketing para maçãs.</p>
-                     
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="thumb ep5"></div>
-            <div class="info">
-                <h3>5.A Revolta dos Meeseeks</h3>
-                <p>22min . 20/01/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Rick proporciona à família uma solução para seus problemas, 
-                    ficando liberado para ir a uma aventura liderada por Morty.</p>
-                     
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="thumb ep6"></div>
-            <div class="info">
-                <h3>6.Rick Potion #9</h3>
-                <p>22min . 27/01/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Uma poção projetada para tornar Morty atraente para uma garota se torna viral e infecta toda a Terra, 
-                    então Rick tem que limpar a bagunça criando outra bagunça.</p>
-                     
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="thumb ep7"></div>
-            <div class="info">
-                <h3>7.O Pequeno Gazorpazorp</h3>
-                <p>22min . 10/03/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Morty vira pai de um bebê extraterrestre; Rick e Summer 
-                    ficam presos em uma dimensão perigosa.</p>
-                     
-
-            </div>
-        </div>
-
-         <div class="card">
-            <div class="thumb ep8"></div>
-            <div class="info">
-                <h3>8.Realidade Alternativa</h3>
-                <p>22min . 17/03/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Rick hackeia o decodificador da TV para permitir acesso a várias realidades;
-                     Jerry, Beth e Summer ficam focados em uma das outras invenções de Rick.</p>
-                     
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="thumb ep9"></div>
-            <div class="info">
-                <h3>9.Uma Loja do Diabo</h3>
-                <p>22min . 24/03/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Summer consegue um trabalho em uma loja de penhora cujo proprietário é o próprio Diabo; 
-                    Jerry ajuda Morty em um projeto de ciências e cria sérios problemas plutonianos.</p>
-                     
-
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="thumb ep10"></div>
-            <div class="info">
-                <h3>10.Contato Imeadiato</h3>
-                <p>22min . 07/04/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Uma associação de Ricks de universos alternativos viaja para a dimensão C-137 em busca de Rick.
-                     Um desses Ricks estabelece uma relação muito especial com Jerry.</p>
-                     
-
-            </div>
-        </div>
-
-         <div class="card">
-            <div class="thumb ep11"></div>
-            <div class="info">
-                <h3>11.Negócio Arriscado</h3>
-                <p>22min . 14/04/2014</p>
-                <button>Assistir</button>
-                <p class="desc">Beth e Jerry partem para uma escapadela romântica relacionada ao Titanic; 
-                    Rick e Summer dão uma grande festa intergaláctica em casa, deixando Morty muito preocupado.</p>
-                     
-
-            </div>
-        </div>
-
-
-      </section>
-
-      <!-- footer -->
-
-      <footer class="footer">
-        <div class="footer-overlay"></div>
-        <div class="footer-content">
-            <img src="media/images/desktop/footer_imagem_720.jpg" alt="Rick no Laboratório">
-            <div class="temporadas">
-                <h3>TEMPORADAS</h3>
-                
-            </div>
-
-        </div>
-      </footer>
-    
+    <script src="assets/js/temporadas.js"></script>
 </body>
 </html>
